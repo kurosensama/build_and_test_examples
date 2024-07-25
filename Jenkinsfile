@@ -6,7 +6,7 @@ pipeline {
             steps {
                 agent {
                     docker {
-                        image alpine:latest
+                        image 'alpine:latest'
                     }
                 }
                 echo 'Hello Worldo'
