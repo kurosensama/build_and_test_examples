@@ -3,12 +3,12 @@ pipeline {
 
     stages {
         stage('Build Java') {
-            steps {
-                agent {
-                    docker {
-                        image 'alpine:latest'
-                    }
+            agent {
+                docker {
+                    image 'alpine:latest'
                 }
+            }
+            steps {
                 echo 'Hello Worldo'
             }
         }
