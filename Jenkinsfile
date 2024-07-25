@@ -9,7 +9,7 @@ pipeline {
             //     }
             // }
             steps {
-                sh 'whoami'
+                sh 'id'
                 sh 'cat /etc/group'
                 echo 'Hello Worldo'
             }
