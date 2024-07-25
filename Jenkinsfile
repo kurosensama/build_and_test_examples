@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        agent {
-            docker {
-                image alpine:latest
-            }
-        }
         stage('Build Java') {
             steps {
+                agent {
+                    docker {
+                        image alpine:latest
+                    }
+                }
                 echo 'Hello Worldo'
             }
         }
