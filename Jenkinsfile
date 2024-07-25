@@ -3,11 +3,11 @@ pipeline {
 
     stages {
         stage('Build Java') {
-            // agent {
-            //     docker {
-            //         image 'alpine:latest'
-            //     }
-            // }
+            agent {
+                docker {
+                    image 'alpine:latest'
+                }
+            }
             steps {
                 sh 'id'
                 sh 'cat /etc/group'
