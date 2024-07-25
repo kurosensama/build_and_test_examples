@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         agent{
-            docker{
+            docker {
                 image alpine:latest
             }
         }
