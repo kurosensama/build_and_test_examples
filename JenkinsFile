@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build Java') {
             steps {
-                echo 'Hello World'
+                echo 'Hello Worldo'
             }
         }
     }
