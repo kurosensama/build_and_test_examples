@@ -9,7 +9,7 @@ pipeline {
             //     }
             // }
             steps {
-                whoami
+                sh 'whoami'
                 echo 'Hello Worldo'
             }
         }
