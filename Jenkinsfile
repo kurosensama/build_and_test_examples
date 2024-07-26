@@ -20,6 +20,13 @@ pipeline {
                     export PATH=$PATH:$(pwd)/apache-ant-1.10.14/bin
                     java --version
                     ant -version
+                    ant jar
+                    java -classpath build/lib/math.jar math.Fibonacci 30
+                    ant test
+                    cat build/test/xml/TESTS-TestSuites.xml
+                    ant test-report
+                    cat build/test/html/index.html
+                    ant clean
                 '''
             }
         }
