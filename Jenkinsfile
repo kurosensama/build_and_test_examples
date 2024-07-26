@@ -6,6 +6,7 @@ pipeline {
             agent {
                 docker {
                     image 'alpine:latest'
+                    args '--user root'
                 }
             }
             steps {
