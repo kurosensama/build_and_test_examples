@@ -11,7 +11,6 @@ pipeline {
                 }
             }
             steps {
-                cleanWs()
                 sh '''
                     cd java
                     apk add curl
@@ -30,6 +29,11 @@ pipeline {
                     ant clean
                 '''
             }
+        }
+    }
+    post { 
+        failure { 
+            cleanWs()
         }
     }
 }
