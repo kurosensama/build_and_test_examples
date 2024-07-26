@@ -19,7 +19,7 @@ pipeline {
                     unzip ant.zip
                     export PATH=$PATH:$(pwd)/apache-ant-1.10.14/bin
                     java --version
-                    ant --version
+                    ant -version
                 '''
             }
         }
