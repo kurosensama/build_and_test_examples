@@ -15,8 +15,8 @@ pipeline {
                     apk add curl
                     apk add openjdk11
                     curl -o ant.zip "https://dlcdn.apache.org//ant/binaries/apache-ant-1.10.14-bin.zip"
-                    unzip *.zip
-                    export PATH=$PATH:$pwd/apache*/bin
+                    unzip ant.zip
+                    export PATH=$PATH:$pwd/apache-ant-1.10.14/bin
                     java --version
                     ant --version
                 '''
