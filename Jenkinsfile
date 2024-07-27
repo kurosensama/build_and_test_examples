@@ -16,9 +16,9 @@ pipeline {
                     apk add curl
                     apk add openjdk11
                     curl -o ant.zip "https://dlcdn.apache.org//ant/binaries/apache-ant-1.10.14-bin.zip"
-                    unzip ant.zip
+                    unzip ant.zip -o
                     export PATH=$PATH:$(pwd)/apache-ant-1.10.14/bin
-                    java --version -o
+                    java --version
                     ant -version
                     ant jar
                     java -classpath build/lib/math.jar math.Fibonacci 30
