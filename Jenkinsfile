@@ -26,7 +26,6 @@ pipeline {
                     cat build/test/xml/TESTS-TestSuites.xml
                     ant test-report
                     cat build/test/html/index.html
-                    ant clean
                 '''
             }
         }
