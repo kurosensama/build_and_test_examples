@@ -18,7 +18,7 @@ pipeline {
                     curl -o ant.zip "https://dlcdn.apache.org//ant/binaries/apache-ant-1.10.14-bin.zip"
                     unzip ant.zip
                     export PATH=$PATH:$(pwd)/apache-ant-1.10.14/bin
-                    java --version
+                    java --version -o
                     ant -version
                     ant jar
                     java -classpath build/lib/math.jar math.Fibonacci 30
