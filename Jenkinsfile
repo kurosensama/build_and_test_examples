@@ -43,11 +43,11 @@ pipeline {
                 sh '''
                     cd python
                     apk add python3 py-pip
-                    pip install -U pytest
+                    pip install pytest
                     python --version
-                    py.test --version
+                    pytest --version
                     python maths/fibonacci.py 30
-                    py.test --junit-xml=report.xml
+                    pytest --junit-xml=report.xml
                     cat report.xml
                 '''
             }
