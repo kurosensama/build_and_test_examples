@@ -59,7 +59,7 @@ pipeline {
             cleanWs()
         }
         success {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/test/html', reportFiles: 'index.html', reportName: 'java report', reportTitles: '', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'java/build/test/html', reportFiles: 'index.html', reportName: 'java report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
