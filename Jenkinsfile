@@ -42,8 +42,7 @@ pipeline {
             steps {
                 sh '''
                     cd python
-                    apk add python3 py-pip
-                    pip3 install pytest
+                    apk add python3 py3-pytest
                     python --version
                     pytest --version
                     python maths/fibonacci.py 30
