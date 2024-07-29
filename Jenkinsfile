@@ -2,7 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Java') {
+        stage('Build') {
+            parallel {
+                stage('Build Java') {
             agent {
                 docker {
                     image 'alpine:latest'
@@ -54,6 +56,8 @@ pipeline {
                     ant test-report
                     cat build/test/html/index.html
                 '''
+            }
+        }
             }
         }
     }
