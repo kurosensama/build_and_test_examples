@@ -42,7 +42,7 @@ pipeline {
             steps {
                 sh '''
                     cd python
-                    apk add python3 python3-pip
+                    apk add python3 py-pip
                     pip install -U pytest
                     python --version
                     py.test --version
