@@ -41,20 +41,13 @@ pipeline {
             }
             steps {
                 sh '''
-                    cd java
-                    apk add curl
-                    apk add openjdk11
-                    curl -o ant.zip "https://dlcdn.apache.org//ant/binaries/apache-ant-1.10.14-bin.zip"
-                    unzip ant.zip -o
-                    export PATH=$PATH:$(pwd)/apache-ant-1.10.14/bin
-                    java --version
-                    ant -version
-                    ant jar
-                    java -classpath build/lib/math.jar math.Fibonacci 30
-                    ant test
-                    cat build/test/xml/TESTS-TestSuites.xml
-                    ant test-report
-                    cat build/test/html/index.html
+                    cd python
+                    apk add python3
+                    python --version
+                    py.test --version
+                    python maths/fibonacci.py 30
+                    py.test --junit-xml=report.xml
+                    cat report.xml
                 '''
             }
         }
