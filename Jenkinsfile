@@ -58,5 +58,8 @@ pipeline {
         failure { 
             cleanWs()
         }
+        success {
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/test/html', reportFiles: 'index.html', reportName: 'java report', reportTitles: '', useWrapperFileDirectly: true])
+        }
     }
 }
